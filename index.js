@@ -1,6 +1,6 @@
 // 01 - Map Double
-// let array = [1, 2, 3, 4, 5]
-// let double = array.map( (number) => {
+// let numbers = [1, 2, 3, 4, 5]
+// let double = numbers.map( (number) => {
 //     return number * 2
 // })
 // console.log(double)
@@ -18,7 +18,7 @@
 // ]
 // let shortNames = longNames.map( (name) => {
 //     return {
-//         name: name.firstName +" "+ name.lastName
+//         name: `${name.firstName} ${name.lastName}`
 //     }
 // })
 // console.log(shortNames)
@@ -74,10 +74,11 @@
 
 // })
 // let chocolateCakeStatus = chocolateCake.map( (cake) => {
-//     return cake.status = "sold out !"
+//      cake.status = "sold out !"
+//      return cake
 
 // })
-// console.log(chocolateCake)
+// console.log(chocolateCakeStatus)
 
 // 06 - Cake v2
 // let pie = cakes.find( (cake) => {
@@ -87,7 +88,7 @@
 // console.log(pie)
 
 // 07 - Factorielle forEach
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // let factorial = 1
 // numbers.forEach( (number) => {
 //     factorial *= number
@@ -97,25 +98,28 @@
 
 // 08 - Chess board
 
-// let boxes = [0, 1, 2, 3, 4, 5, 6, 7]
+// let iterations = [0, 1, 2, 3, 4, 5, 6, 7]
 
-// boxes.forEach( (_box, index) => {
-//         let raw = ""
+// iterations.forEach( (lign, indexLign) => {
+//         let resultLign = ""
 
-//     boxes.forEach( (indexLign) => {
-//         if ((indexLign + index) % 2 == 0){
-//             raw += "[ ]"
+//     iterations.forEach( (column, indexColumn) => {
+//         if ((indexColumn + indexLign) % 2 === 0){
+//             resultLign += "[ ]"
 //         }
 //         else {
-//             raw += "[X]"
+//             resultLign += "[X]"
 //         }
 //     })
-//     console.log(raw)
+//     console.log(resultLign)
 // })
 
 // 09 - Exercice 3 bis
-// const array = [12, 55, "hello", true, { isStudent: false }, 3]
-// let numbers = array.filter((data) => {
-//     return typeof(data) === "number"
-// })
-// console.log(numbers)
+// const filterNumbers = (filterNumber) => {
+//     numbers = filterNumber.filter((data) => {
+//         return typeof(data) === "number"
+//     })
+//     console.log(numbers)
+// }
+
+// filterNumbers([12, 55, "hello", true, { isStudent: false }, 3])
